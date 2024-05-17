@@ -1,11 +1,12 @@
 (function () {
-  const slides = document.querySelectorAll('.slide');
-  const slidesContainer = document.querySelector('#slides-container')
-  const indicatorsContainer = document.querySelector('#indicators-container')
-  const indicatorItems = document.querySelectorAll('.indicator')
-  const pauseBtn = document.querySelector('#pause-btn');
-  const nextBtn = document.querySelector('#next-btn')
-  const prevBtn = document.querySelector('#prev-btn')
+  const container = document.querySelector('#carousel');
+  const slides = container.querySelectorAll('.slide');
+  const slidesContainer = container.querySelector('#slides-container')
+  const indicatorsContainer = container.querySelector('#indicators-container')
+  const indicatorItems = container.querySelectorAll('.indicator')
+  const pauseBtn = container.querySelector('#pause-btn');
+  const nextBtn = container.querySelector('#next-btn')
+  const prevBtn = container.querySelector('#prev-btn')
 
   const SLIDES_COUNT = slides.length;
   const INTERVAL = 2000;
