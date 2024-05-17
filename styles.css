@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: monospace;
+  background-color: black;
+}
+
+.slides {
+  width: 1300px;
+  max-width: 100vw;
+  height: 700px;
+  margin: auto;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .slides {
+    height: 450px;
+  }
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s;
+  user-select: none;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slide img {
+  width: 1300px;
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+
+.controls {
+  position: absolute;
+  top: 45%;
+  width: 96%;
+  left: 2%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+.control {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff2;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.control:hover {
+  background-color: #fff6;
+}
+
+.control i {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  font-size: 40px;
+  color: #fff2;
+}
+
+.indicators {
+  color: #fff5;
+  left: 0;
+  bottom: 1%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #fff5;
+  margin: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.indicator:hover {
+  background-color: #fff;
+}
+.control i:hover {
+  color: #fff;
+}
+
+.indicator.active {
+  width: 30px;
+}
