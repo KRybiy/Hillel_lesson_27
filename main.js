@@ -40,6 +40,7 @@
   }
 
   function pauseHandler() {
+    if (!this.isPlaying) return
     isPlaying = false;
     clearInterval(timerId)
     pauseBtn.innerHTML = FA_PLAY;
@@ -50,6 +51,7 @@
   }
 
   function playHandler() {
+    if (this.isPlaying) return
     isPlaying = true;
     tick();
     pauseBtn.innerHTML = FA_PAUSE;
@@ -85,6 +87,7 @@
   }
 
   function swipeStartHandler(e) {
+    e.preventDefault(); 
     startPosX = e instanceof MouseEvent 
       ? e.pageX 
       : e.changedTouches[0].pageX // touchEvent
